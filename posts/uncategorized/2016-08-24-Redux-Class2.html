@@ -84,15 +84,27 @@
 
 
 
-<meta name="description" content="哈哈哈">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhaoheqi">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="实例1. Counter Vanilla运行 Counter Vanilla 示例:
+1234git clone https://github.com/reactjs/redux.gitcd redux/examples/counter-vanillaopen index.html
+该示例不需搭建系统或视图框架，展示了基于 ES5 的原生 Redux API。
+效果：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Redux入门教程(一) 实例分析">
+<meta property="og:url" content="http://yoursite.com/posts/uncategorized/2016-08-24-Redux-Class2.html">
 <meta property="og:site_name" content="zhaoheqi">
-<meta property="og:description" content="哈哈哈">
+<meta property="og:description" content="实例1. Counter Vanilla运行 Counter Vanilla 示例:
+1234git clone https://github.com/reactjs/redux.gitcd redux/examples/counter-vanillaopen index.html
+该示例不需搭建系统或视图框架，展示了基于 ES5 的原生 Redux API。
+效果：">
+<meta property="og:image" content="http://yoursite.com/posts/uncategorized/2016-08-24-Redux-Class2.html/QQ20160824-0@2x.png">
+<meta property="og:updated_time" content="2016-08-24T08:46:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhaoheqi">
-<meta name="twitter:description" content="哈哈哈">
+<meta name="twitter:title" content="Redux入门教程(一) 实例分析">
+<meta name="twitter:description" content="实例1. Counter Vanilla运行 Counter Vanilla 示例:
+1234git clone https://github.com/reactjs/redux.gitcd redux/examples/counter-vanillaopen index.html
+该示例不需搭建系统或视图框架，展示了基于 ES5 的原生 Redux API。
+效果：">
+<meta name="twitter:image" content="http://yoursite.com/posts/uncategorized/2016-08-24-Redux-Class2.html/QQ20160824-0@2x.png">
 
 
 
@@ -113,9 +125,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/posts/uncategorized/2016-08-24-Redux-Class2.html"/>
 
-  <title> zhaoheqi </title>
+  <title> Redux入门教程(一) 实例分析 | zhaoheqi </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,9 +148,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -225,9 +235,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -247,10 +257,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/posts/uncategorized/2016-08-24-Redux-Class2.html" itemprop="url">
-                  Redux入门教程(一) 实例分析
-                </a>
+                Redux入门教程(一) 实例分析
               
             
           </h1>
@@ -290,26 +297,29 @@
       
 
       
-        
-          <h1 id="实例1-Counter-Vanilla"><a href="#实例1-Counter-Vanilla" class="headerlink" title="实例1. Counter Vanilla"></a>实例1. Counter Vanilla</h1><p>运行 Counter Vanilla 示例:</p>
+        <h1 id="实例1-Counter-Vanilla"><a href="#实例1-Counter-Vanilla" class="headerlink" title="实例1. Counter Vanilla"></a>实例1. Counter Vanilla</h1><p>运行 Counter Vanilla 示例:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/reactjs/redux.git</div><div class="line"></div><div class="line">cd redux/examples/counter-vanilla</div><div class="line">open index.html</div></pre></td></tr></table></figure>
 <p>该示例不需搭建系统或视图框架，展示了基于 ES5 的原生 Redux API。</p>
 <p>效果：</p>
 <img src="/posts/uncategorized/2016-08-24-Redux-Class2.html/QQ20160824-0@2x.png" alt="QQ20160824-0@2x.png" title="">
-          <div class="post-more-link text-center">
-            <a class="btn" href="/posts/uncategorized/2016-08-24-Redux-Class2.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+<a id="more"></a>
+<p><code>源码: index.html</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;title&gt;Redux basic example&lt;/title&gt;</div><div class="line">    &lt;script src=&quot;https://npmcdn.com/redux@latest/dist/redux.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">      &lt;p&gt;</div><div class="line">        Clicked: &lt;span id=&quot;value&quot;&gt;0&lt;/span&gt; times</div><div class="line">        &lt;button id=&quot;increment&quot;&gt;+&lt;/button&gt;</div><div class="line">        &lt;button id=&quot;decrement&quot;&gt;-&lt;/button&gt;</div><div class="line">        &lt;button id=&quot;incrementIfOdd&quot;&gt;Increment if odd&lt;/button&gt;</div><div class="line">        &lt;button id=&quot;incrementAsync&quot;&gt;Increment async&lt;/button&gt;</div><div class="line">      &lt;/p&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">      function counter(state, action) &#123;</div><div class="line">        if (typeof state === &apos;undefined&apos;) &#123;</div><div class="line">          return 0</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        switch (action.type) &#123;</div><div class="line">          case &apos;INCREMENT&apos;:</div><div class="line">            return state + 1</div><div class="line">          case &apos;DECREMENT&apos;:</div><div class="line">            return state - 1</div><div class="line">          default:</div><div class="line">            return state</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      var store = Redux.createStore(counter)</div><div class="line">      var valueEl = document.getElementById(&apos;value&apos;)</div><div class="line"></div><div class="line">      function render() &#123;</div><div class="line">        valueEl.innerHTML = store.getState().toString()</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      render()</div><div class="line">      store.subscribe(render)</div><div class="line"></div><div class="line">      document.getElementById(&apos;increment&apos;)</div><div class="line">        .addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">          store.dispatch(&#123; type: &apos;INCREMENT&apos; &#125;)</div><div class="line">        &#125;)</div><div class="line"></div><div class="line">      document.getElementById(&apos;decrement&apos;)</div><div class="line">        .addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">          store.dispatch(&#123; type: &apos;DECREMENT&apos; &#125;)</div><div class="line">        &#125;)</div><div class="line"></div><div class="line">      document.getElementById(&apos;incrementIfOdd&apos;)</div><div class="line">        .addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">          if (store.getState() % 2 !== 0) &#123;</div><div class="line">            store.dispatch(&#123; type: &apos;INCREMENT&apos; &#125;)</div><div class="line">          &#125;</div><div class="line">        &#125;)</div><div class="line"></div><div class="line">      document.getElementById(&apos;incrementAsync&apos;)</div><div class="line">        .addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">          setTimeout(function () &#123;</div><div class="line">            store.dispatch(&#123; type: &apos;INCREMENT&apos; &#125;)</div><div class="line">          &#125;, 1000)</div><div class="line">        &#125;)</div><div class="line">    &lt;/script&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -317,221 +327,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/posts/uncategorized/2016-08-23-Redux-Class1.html" rel="next" title="Redux入门教程(一) 基础知识">
+                <i class="fa fa-chevron-left"></i> Redux入门教程(一) 基础知识
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/posts/uncategorized/2016-08-23-Redux-Class1.html" itemprop="url">
-                  Redux入门教程(一) 基础知识
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-23T14:58:33+08:00" content="2016-08-23">
-              2016-08-23
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p><a href="http://cn.redux.js.org/index.html">http://cn.redux.js.org/index.html</a></p>
-<img src="/posts/uncategorized/2016-08-23-Redux-Class1.html/logo-title-dark.png" alt="logo-title-dark.png" title="">
-<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><hr>
-<p>随着 JavaScript 单页应用开发日趋复杂，JavaScript 需要管理比任何时候都要多的 state （状态）。 这些 state 可能包括服务器响应、缓存数据、本地生成尚未持久化到服务器的数据，也包括 UI 状态，如激活的路由，被选中的标签，是否显示加载动效或者分页器等等。</p>
-<p>管理不断变化的 state 非常困难。如果一个 model 的变化会引起另一个 model 变化，那么当 view 变化时，就可能引起对应 model 以及另一个 model 的变化，依次地，可能会引起另一个 view 的变化。直至你搞不清楚到底发生了什么。state 在什么时候，由于什么原因，如何变化已然不受控制。 当系统变得错综复杂的时候，想重现问题或者添加新功能就会变得举步维艰。</p>
-<p>如果这还不够糟糕，考虑一些来自前端开发领域的新需求，如更新调优、服务端渲染、路由跳转前请求数据等等。前端开发者正在经受前所未有的复杂性，难道就这么放弃了吗？当然不是。</p>
-<p>这里的复杂性很大程度上来自于：我们总是将两个难以厘清的概念混淆在一起：变化和异步。 我称它们为曼妥思和可乐。如果把二者分开，能做的很好，但混到一起，就变得一团糟。一些库如 React 试图在视图层禁止异步和直接操作 DOM 来解决这个问题。美中不足的是，React 依旧把处理 state 中数据的问题留给了你。Redux就是为了帮你解决这个问题。</p>
-<p>Redux 是 JavaScript 状态容器，提供可预测化的状态管理。可以让你构建一致化的应用，运行于不同的环境（客户端、服务器、原生应用），并且易于测试。不仅于此，它还提供 超爽的开发体验，比如有一个时间旅行调试器可以编辑后实时预览。Redux 除了和 React 一起用外，还支持其它界面库。<br>它体小精悍（只有2kB）且没有任何依赖。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/posts/uncategorized/2016-08-23-Redux-Class1.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/posts/uncategorized/2016-08-23-Flux介绍.html" itemprop="url">
-                  Flux介绍
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-23T11:16:51+08:00" content="2016-08-23">
-              2016-08-23
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><a href="https://facebook.github.io/flux/docs/overview.html#content">https://facebook.github.io/flux/docs/overview.html#content</a></p>
-<img src="/posts/uncategorized/2016-08-23-Flux介绍.html/bg2016011501.png" alt="bg2016011501.png" title="">
-<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>Flux是Facebook用来构建用户端的web应用的应用程序体系架构。相比于形式化的框架它更像是一个架构思想，不需要太多新的代码你就可以马上使用Flux构建你的应用。</p>
-<p>Flux应用主要包括三部分：dispatcher、store和views（React components），千万不要和MVC(model-View-Controller)搞混。Controller在Flux应用中也确实存在，但是是以controller-view的形式。view通常处于应用的顶层，它从stores中获取数据，同时将这些数据传递给它的后代节点。另外，action creators - dispatcher辅助方法 - 一个被用来提供描述应用所有可能存在的改变的语义化的API。把它理解为Flux更新闭环的第四个组成部分可以帮助你更好的理解它。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/posts/uncategorized/2016-08-23-Flux介绍.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -539,6 +360,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -558,8 +383,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/little_boy.jpg"
@@ -624,6 +458,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#实例1-Counter-Vanilla"><span class="nav-number">1.</span> <span class="nav-text">实例1. Counter Vanilla</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -720,6 +565,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
